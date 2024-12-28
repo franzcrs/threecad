@@ -1,0 +1,10 @@
+/**
+ * Filename: index.css
+ * Author: Franz Chuquirachi
+ * Created: 2024-12-16
+ * Copyright © 2024 Franz Arthur Chuquirachi Rosales. All rights reserved.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
