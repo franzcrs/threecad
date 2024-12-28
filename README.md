@@ -16,8 +16,7 @@ And specially, for the purpose of proposing solutions for reducing the costs of 
 When the customer visualize the application interface will scroll down to interact with the rendered 3D scene. The sample box that is loaded in the scene invites the user to interact with the 3D scene using the cursor. After trying out the natural control of the 3D scene with the cursor and exploring the avaiable buttons in the interface, the user will try to search for models in the 'database' by using the Search box. Information of available 3D models based on the inserted query will be displayed and the user will click on the model of its preference. The server will transfer the selected model file to the interface, and next it will be displayed in the 3D scene, replacing the previous model. The user will notice that different type of files could be fetched from the server and will try each of the options. The user will notice the difference in the files by watching the Fetch time displayed on the bottom right of the 3D scene. The user will notice that the previously loaded files are accesible at every time from the 'Inspector' Tab and will try to drag and drop STL files to the tab since at the begining it invited the user to do so. When the file is dropped, the file characteristics are verified and the results are displayed. In this case, all processes do not communicate with the server. In case the file has a correct format, the 3d object will be loaded on the scene replacing the previous model. The user will keep adding more models through any of the available methods. 
 
 <p style="display: flex; justify-content: center; margin: 0;">
-  <img src="img/interface-0.png" style="width: 50%; height: auto;" />
-  <img src="img/interface-1.png" style="width: 50%; height: auto;" />
+  <img src="media/threecad-demo.gif" style="max-width: 95%;" />
 </p>
 
 ## Local Machine Setup and Execution
@@ -277,10 +276,10 @@ Quantitatively speaking the second technique had better reduction in computation
   </tr>
   <tr>
     <td colspan="2">Facets-reduced model quality (Critical factor)</td>
-    <td><img src="img/conrod-facet-reduced.png" style="width: 100%; height: auto;"/></td>
-    <td><img src="img/v6engine-facet-reduced.png" style="width: 100%; height: auto;"/></td>
-    <td><img src="img/gear-facet-reduced.png" style="width: 100%; height: auto;"/></td>
-    <td><img src="img/drill-facet-reduced.png" style="width: 100%; height: auto;"/></td>
+    <td><img src="media/conrod-facet-reduced.png" style="max-width: 120px;"/></td>
+    <td><img src="media/v6engine-facet-reduced.png" style="max-width: 120px;"/></td>
+    <td><img src="media/gear-facet-reduced.png" style="max-width: 120px;"/></td>
+    <td><img src="media/drill-facet-reduced.png" style="max-width: 120px;"/></td>
   </tr>
 </table>
 
