@@ -19,7 +19,31 @@ When the customer visualize the application interface will scroll down to intera
   <img src="media/threecad-demo.gif" style="max-width: 95%;" />
 </p>
 
-## Local Machine Setup and Execution
+## Run in Codespaces
+
+1. Create a Github codespace
+<p style="display: flex; justify-content: center; margin: 0;">
+  <img src="media/codespaces-demo.gif" style="width: 400px;" />
+</p>
+
+2. Open a new VS Code terminal and install node dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Type in the letter `o`+`Enter` to open the browser and navigate to the frontend URL (http://127.0.0.1:3000):
+   ```bash
+   o
+   ```
+   
+5. Use the web application
+
+## Setup and Run in Local Machine 
 
 ### Prerequisites
 
@@ -79,7 +103,7 @@ When the customer visualize the application interface will scroll down to intera
    npm run dev
    ```
 
-3. In the last terminal, insert the letter `o`+`Enter` to open the browser and navigate to the frontend URL (http://127.0.0.1:3000):
+3. In the last terminal, type in the letter `o`+`Enter` to open the browser and navigate to the frontend URL (http://127.0.0.1:3000):
    ```bash
    o
    ```

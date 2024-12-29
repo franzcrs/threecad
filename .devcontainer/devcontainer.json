@@ -1,0 +1,29 @@
+// Reference: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-python-project-for-codespaces
+{
+	"name": "Python Dockerfile",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Path is relative to the devcontainer.json file.
+        "dockerfile": "Dockerfile"
+	},
+	// Features to add to the dev container. More info: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/configuring-dev-containers/adding-features-to-a-devcontainer-file?tool=webui.
+	"features": {
+		// Node.js (via asdf) feature. More info: https://github.com/devcontainers-extra/features/tree/main/src/node-asdf
+		"ghcr.io/devcontainers-extra/features/node-asdf:0": {
+			"version" : "v21.7.3"
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5000,3000],
+
+	// Uncomment the next line to run commands after the container is created.
+	"postCreateCommand": "python server/server.py"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+}
