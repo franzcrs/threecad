@@ -11,7 +11,7 @@ import os
 import time
 
 server = Flask(__name__)
-CORS(server)
+CORS(server, supports_credentials=True, resources={r"/*": {"origins": "*"}})
 
 # Configuration
 MODELS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'models'))

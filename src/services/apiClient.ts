@@ -7,12 +7,21 @@
 
 import { SearchResult } from '../utils/types';
 
-const API_BASE_URL = 'http://127.0.0.1:5000'; // Flask server defined URL and port
+// const API_BASE_URL = 'http://127.0.0.1:5000'; // Flask server defined URL and port
+let apiUrl = window.location.href.replace('3000', '5000');
+if (apiUrl.endsWith("/")) apiUrl = apiUrl.slice(0, -1);
+const API_BASE_URL = apiUrl; // Define the API URL based on the current window URL
 
 // Asynchronous API request to fetch results for the query string
 export const searchModels = async (query: string): Promise<SearchResult[]> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/search?query=${query}`);
+    console.log(`Fetch: ${API_BASE_URL}/search?query=${query}`);
+    const response = await fetch(`${API_BASE_URL}/search?query=${query}`,
+      {
+        method: 'GET',
+        credentials: 'include',
+      }
+    );
     if (!response.ok) {
       throw new Error('Search request failed');
     }
@@ -34,7 +43,13 @@ export const searchModels = async (query: string): Promise<SearchResult[]> => {
 // Asynchronous API request to fetch the model file
 export const fetchModel = async (modelFilename: string): Promise<Blob> => {
   return new Promise((resolve, reject) => {
-    fetch(`${API_BASE_URL}/file/${modelFilename}`)
+    console.log(`Fetch: ${API_BASE_URL}/file/${modelFilename}`);
+    fetch(`${API_BASE_URL}/file/${modelFilename}`, 
+      {
+        method: 'GET',
+        credentials: 'include',
+      }
+    )
       .then(response => {
         if (!response.ok) {
           throw new Error(`Error fetching model: ${response.statusText}`);
