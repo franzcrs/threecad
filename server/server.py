@@ -10,7 +10,7 @@ from flask_cors import CORS
 import os
 import time
 
-server = Flask(__name__)
+server = Flask(__name__, static_folder="static", static_url_path="")
 CORS(server, supports_credentials=True, resources={r"/*": {"origins": "*"}})
 
 # Configuration
