@@ -11,7 +11,7 @@ import { SearchResult } from '../utils/types';
 let apiUrl = import.meta.env.PROD
   ? 'http://127.0.0.1:5000'
   : window.location.origin;
-if (apiUrl.endsWith("/")) apiUrl = apiUrl.slice(0, -1);
+// if (apiUrl.endsWith("/")) apiUrl = apiUrl.slice(0, -1);
 const API_BASE_URL = apiUrl; // Define the API URL based on the current window URL
 
 // Asynchronous API request to fetch results for the query string
