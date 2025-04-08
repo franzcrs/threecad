@@ -59,6 +59,10 @@ def get_models_details():
         })
     return models
 
+@server.route("/")
+def index():
+    return send_from_directory(server.static_folder, "index.html")
+
 @server.route('/search')
 def search():
     """
