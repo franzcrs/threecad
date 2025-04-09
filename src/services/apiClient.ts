@@ -9,10 +9,11 @@ import { SearchResult } from '../utils/types';
 
 // const API_BASE_URL = 'http://127.0.0.1:5000'; // Flask server defined URL and port
 let apiUrl = import.meta.env.PROD
-  ? 'http://127.0.0.1:5000'
-  : window.location.origin;
+  ? window.location.origin
+  : 'http://127.0.0.1:5000'; // Flask server defined URL and port in development
 // if (apiUrl.endsWith("/")) apiUrl = apiUrl.slice(0, -1);
 const API_BASE_URL = apiUrl; // Define the API URL based on the current window URL
+console.log('API_BASE_URL:', API_BASE_URL);
 
 // Asynchronous API request to fetch results for the query string
 export const searchModels = async (query: string): Promise<SearchResult[]> => {
